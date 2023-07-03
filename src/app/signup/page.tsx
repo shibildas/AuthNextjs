@@ -7,11 +7,13 @@ import React from "react";
 
 useRouter
 const SignupPage = () => {
+  const router=useRouter()
   const[user,setUser]=React.useState({
     email:"",
     password:"",
     username:"",
   })
+  const [buttonDisabled,setButtonDisabled]=React.useState(false)
   const handleSignup=async()=>{
 
   }
