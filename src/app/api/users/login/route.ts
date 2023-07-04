@@ -16,7 +16,9 @@ export async function POST(request:NextRequest){
                 return NextResponse.json({error:"invalid credentials"},{status:400})
             }else{
                 const tokenData={
-                    userId:user._id
+                    userId:user._id,
+                    username:user.username,
+                    email:user.email
                 }
                 const token=await jwt.sign(tokenData,
                     process.env.TOKEN_SECRET!,
